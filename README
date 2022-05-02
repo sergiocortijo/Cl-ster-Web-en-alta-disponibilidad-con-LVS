@@ -1,0 +1,6 @@
+El objetivo de este proyecto es instalar un clúster de alta disponibilidad activo/pasivo con keepalived. Estas máquinas lo que harán es balancear 
+la carga con LVS(Linux Virtual Server). El balanceador que esté activo en ese momento repartirá las peticiones sobre los diferentes servidores web que 
+estén activos y se comunicarán con el balanceador por una red interna. Para la sincronización de datos los servidores utilizaran DRBD con OCFS2. Mediante 
+estas herramientas se replicarán los datos de la web y de las bases de datos. Como servidor web vamos a utilizar Apache con PHP 7.2 que se conectarán a las bases 
+de datos (PostgreSQL) que son internas
+
